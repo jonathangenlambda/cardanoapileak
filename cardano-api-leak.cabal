@@ -1,0 +1,41 @@
+cabal-version:      3.0
+name:               axo-cardano
+version:            0.1.0
+author:             Generation Lambda
+maintainer:         dev@genlambda.com
+copyright:          all right reserved, Generation Lambda 2023
+
+executable cardano-api-leaky
+  main-is: Leaky.hs
+
+  hs-source-dirs: .
+
+  build-depends:
+      base
+    , cardano-api
+  
+  default-language:   Haskell2010
+
+  ghc-options: 
+    -Wall -Werror -Wunused-packages 
+    -threaded
+    -rtsopts
+    "-with-rtsopts=-N"
+
+executable cardano-api-nonleaky
+  main-is: NonLeaky.hs
+
+  hs-source-dirs: .
+
+  build-depends:
+      base
+    , cardano-api
+    , ouroboros-network-protocols
+    
+  default-language:   Haskell2010
+  
+  ghc-options:
+    -Wall -Werror -Wunused-packages 
+    -threaded
+    -rtsopts
+    "-with-rtsopts=-N"
