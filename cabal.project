@@ -16,3 +16,5 @@ repository cardano-haskell-packages
 with-compiler: ghc-9.2.5
 
 packages: .
+
+profiling: False
